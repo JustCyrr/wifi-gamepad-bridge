@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_aero_screen"
+    android:padding="16dp">
+
+    <!-- Left Panel: Crystal Aero Glass Controls & Telemetry -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_aero_card"
+        android:padding="18dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wi-Fi Gamepad Bridge"
+            android:textColor="#E0F7FF"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultra-Low Latency Input Streamer"
+            android:textColor="#00E5FF"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- PC IP Input -->
+        <EditText
+            android:id="@+id/etIpAddress"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:hint="PC IP Address (e.g. 192.168.1.20)"
+            android:textColorHint="#94A3B8"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_aero_input"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="Scan for PCs"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@drawable/bg_aero_btn_aqua"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="Connect"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@drawable/bg_aero_btn_amber" />
+        </LinearLayout>
+
+        <!-- Strong Force Vibration Test Button -->
+        <Button
+            android:id="@+id/btnTestRumble"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="⚡ Test Vibration (1.5s)"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_aero_btn_purple"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvDiscoveredList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Network: Ready"
+            android:textColor="#BAE6FD"
+            android:textSize="11sp"
+            android:layout_marginBottom="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2000E5FF"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Live Telemetry Card -->
+        <TextView
+            android:id="@+id/tvGamepadStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gamepad: Searching..."
+            android:textColor="#F0FDFA"
+            android:textSize="13sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvConnectionStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connection: Idle"
+            android:textColor="#38BDF8"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvMetrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Polling Rate: 125 Hz (Paced)\nLatency (RTT): -\nTotal Packets: 0\nWi-Fi Mode: Low Latency"
+            android:textColor="#00E5FF"
+            android:lineSpacingExtra="4dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Right Panel: Frutiger Aero Crystal Gamepad Visualizer -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:orientation="vertical"
+        android:background="@drawable/bg_aero_card"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIVE CONTROLLER MONITOR"
+            android:textColor="#00E5FF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <com.wifigamepad.ui.GamepadVisualView
+            android:id="@+id/gamepadVisualView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

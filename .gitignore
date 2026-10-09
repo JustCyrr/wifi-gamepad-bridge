@@ -1,0 +1,63 @@
+# ==========================================
+# C++ / MSVC / Windows Build Artifacts
+# ==========================================
+build/
+bin/
+obj/
+x64/
+x86/
+Debug/
+Release/
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.res
+*.tlog
+*.recipe
+*.iobj
+*.ipdb
+*.idb
+*.log
+
+# ==========================================
+# CMake & Visual Studio Project Files
+# ==========================================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+.vs/
+.vscode/
+*.suo
+*.user
+*.vcxproj.user
+*.sln.docstates
+
+# ==========================================
+# Android & Gradle Build Artifacts
+# ==========================================
+.gradle/
+app/build/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ==========================================
+# OS & Environment Metadata
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak

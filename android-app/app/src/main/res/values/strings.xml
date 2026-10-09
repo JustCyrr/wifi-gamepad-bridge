@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WiFi Gamepad Bridge</string>
+    <string name="scan_pcs">Scan for PCs</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="status_disconnected">Status: Disconnected</string>
+    <string name="status_connected">Status: Connected (Low Latency Active)</string>
+    <string name="no_controller">Gamepad: Not Detected (Connect Bluetooth Gamepad)</string>
+</resources>
